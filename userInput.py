@@ -7,7 +7,7 @@ class UserInput:
 
     """
     This method takes in a yes or no question, will loop until the user enters
-    a correct value, and then returns that value.
+    a correct value, and then returns true or false for yes or no.
     """
     @staticmethod
     def yesOrNo(question):
@@ -25,6 +25,9 @@ class UserInput:
                 print("Invalid input! Please enter [Y]es or [N]o!\n")
                 continue
 
-            # Returns the user's input
+            # Returns true if yes, or false if no
             else:
-                return userAnswer
+                if userAnswer == "yes" or userAnswer == "y":
+                    return True
+                else:
+                    return False
