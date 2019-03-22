@@ -13,7 +13,7 @@ while running:
 
     # ========== COLLECT INCOME METHODS
     collectingIncomeMethods = True
-    print("===[ INCOME METHODS ]===")
+    print("\n===[ INCOME METHODS ]===")
     while collectingIncomeMethods:
         incomeName = str(input("Enter the name of this income method:\n"))
         incomeAmount = UserInput.getFloat("Enter the amount you make per month through this method:\n")
@@ -24,11 +24,11 @@ while running:
 
     # ========== COLLECT EXPENSES
     collectingExpenses = True
-    print("===[ EXPENSES ]===")
+    print("\n===[ EXPENSES ]===")
     while collectingExpenses:
         expenseName = str(input("Enter the name of this expense:\n"))
         expenseAmount = -UserInput.getFloat("Enter the amount you spent per month on this expense:\n")
-        expenses.appent(Income(expenseName, expenseAmount))
+        expenses.append(Income(expenseName, expenseAmount))
 
         if not UserInput.yesOrNo("Do you want to add another expense?\n[Y]es or [N]o: "):
             collectingExpenses = False

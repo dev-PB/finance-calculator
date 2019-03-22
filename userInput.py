@@ -32,6 +32,7 @@ class UserInput:
                 else:
                     return False
 
+
     """
     This method will ask the user for a float value, check that their input is
     a float value, and then return that value if it is
