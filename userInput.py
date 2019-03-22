@@ -31,3 +31,20 @@ class UserInput:
                     return True
                 else:
                     return False
+
+    """
+    This method will ask the user for a float value, check that their input is
+    a float value, and then return that value if it is
+    """
+    @staticmethod
+    def getFloat(question):
+        while True:
+            try:
+                userAnswer = float(input(question))
+
+            except ValueError:
+                print("Invalid input! Please enter a correct number!\n")
+                continue
+
+            else:
+                return userAnswer
