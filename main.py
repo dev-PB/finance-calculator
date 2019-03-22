@@ -6,6 +6,7 @@ from userInput import *
 from income import *
 
 incomeMethods = []
+expenses = []
 running = True
 
 while running:
@@ -20,3 +21,14 @@ while running:
 
         if not UserInput.yesOrNo("Do you want to add another income method?\n[Y]es or [N]o: "):
             collectingIncomeMethods = False
+
+    # ========== COLLECT EXPENSES
+    collectingExpenses = True
+    print("===[ EXPENSES ]===")
+    while collectingExpenses:
+        expenseName = str(input("Enter the name of this expense:\n"))
+        expenseAmount = -UserInput.getFloat("Enter the amount you spent per month on this expense:\n")
+        expenses.appent(Income(expenseName, expenseAmount))
+
+        if not UserInput.yesOrNo("Do you want to add another expense?\n[Y]es or [N]o: "):
+            collectingExpenses = False
