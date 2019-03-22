@@ -18,11 +18,11 @@ class UserInput:
 
             # Checks that the input is valid
             except ValueError:
-                print("Invalid input! Please enter [Y]es or [N]o!\n")
+                print("\nInvalid input! Please enter [Y]es or [N]o!")
                 continue
 
             if userAnswer != "yes" and userAnswer != "y" and userAnswer != "no" and userAnswer != "n":
-                print("Invalid input! Please enter [Y]es or [N]o!\n")
+                print("\nInvalid input! Please enter [Y]es or [N]o!")
                 continue
 
             # Returns true if yes, or false if no
@@ -43,7 +43,7 @@ class UserInput:
                 userAnswer = float(input(question))
 
             except ValueError:
-                print("Invalid input! Please enter a correct number!\n")
+                print("\nInvalid input! Please enter a correct number!")
                 continue
 
             else:
