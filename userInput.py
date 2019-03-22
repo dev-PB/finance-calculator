@@ -2,15 +2,15 @@
 This class will handle input validation on the user's input.
 """
 
-class userInput:
 
-    @staticmethod
+class UserInput:
+
     """
     This method takes in a yes or no question, will loop until the user enters
     a correct value, and then returns that value.
     """
+    @staticmethod
     def yesOrNo(question):
-
         while True:
             # Asks the question
             try:
