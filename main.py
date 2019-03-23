@@ -61,28 +61,35 @@ while running:
 
     # ========== FORMAT FOR CSV
     # Add income header and income methods
-    data = [["Income Method", "Amount (" + userCurrency + ")", "Percentage"]]
+    data = [["INCOME METHOD", "AMOUNT (" + userCurrency + ")", "PERCENTAGE"]]
     for i in range(len(incomeMethods)):
         data.append([incomeMethods[i].getName(), incomeMethods[i].getAmountMonthly(), str(incomePercentages[i]) + "%"])
 
     # Add income total and expense header
-    data.append(["Total:", incomeTotal, "100%"])
     data.append(["", "", ""])
-    data.append(["Expense", "Amount (" + userCurrency + ")", "Percentage"])
+    data.append(["Total:", incomeTotal, "100%"])
+    for i in range(2):
+        data.append(["", "", ""])
+    data.append(["EXPENSE", "AMOUNT (" + userCurrency + ")", "PERCENTAGE"])
 
     # Add expenses
     for i in range(len(expenses)):
         data.append([expenses[i].getName(), expenses[i].getAmountMonthly(), str(expensePercentages[i]) + "%"])
 
     # Add expense total and net profit
+    data.append(["","",""])
     data.append(["Total:", expenseTotal, "100%"])
-    data.append(["", "", ""])
+    for i in range(2):
+        data.append(["", "", ""])
     data.append(["Net profit:", round(netProfit, 2), ""])
 
     # ========== GET FILENAME AND EXPORT
+    print("\n===[ EXPORTING FILE ]===")
     FileHandler.export(UserInput.getFileName("What would you like to call your spreadsheet?\nFile name: "), data)
     print("Exported successfully!")
 
     # ========== ASK IF THEY'D LIKE TO MAKE ANOTHER
-    if not UserInput.yesOrNo("Would you like to make another spreadsheet?\n[Y]es or [N]o: "):
+    if not UserInput.yesOrNo("\nWould you like to make another spreadsheet?\n[Y]es or [N]o: "):
         running = False
+        
+print("\nGoodbye!")
