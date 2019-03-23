@@ -19,7 +19,7 @@ input("\nPress Enter to continue...\n")
 
 while running:
     # ========== GET CURRENCY SYMBOL
-    userCurrency = str(input("Enter the symbol you would like to use for currency?\nCurrency symbol: "))
+    userCurrency = str(input("What symbol would you like to use for currency?\nCurrency symbol: "))
 
     # ========== COLLECT INCOME METHODS
     collectingIncomeMethods = True
