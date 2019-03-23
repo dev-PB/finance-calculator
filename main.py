@@ -2,6 +2,7 @@
 Made by Ryan Wilson
 https://github.com/onlinePB
 """
+
 # Importing modules
 from userInput import *
 from income import *
@@ -12,7 +13,10 @@ incomeMethods = []
 expenses = []
 running = True
 
-print("===[ Made by Ryan Wilson (github.com/onlinePB) ]===\n")
+# Credits
+print("=== [ ABOUT ]===\nMade by Ryan Wilson\nCheckout my GitHub profile at https://github.com/onlinePB\nReport bugs at https://github.com/onlinePB/finance-calculator/issues\n© Ryan Wilson 2019. All rights reserved.")
+input("\nPress Enter to continue...\n")
+
 while running:
     # ========== GET CURRENCY SYMBOL
     userCurrency = str(input("Enter the symbol you would like to use for currency?\nCurrency symbol: "))

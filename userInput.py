@@ -1,4 +1,7 @@
 """
+Made by Ryan Wilson
+https://github.com/onlinePB
+
 This class will handle input validation on the user's input.
 """
 
@@ -35,7 +38,7 @@ class UserInput:
 
     """
     This method will ask the user for a float value, check that their input is
-    a float value, and then return that value if it is
+    a float value, and then return that value if it is.
     """
     @staticmethod
     def getFloat(question):
@@ -52,7 +55,7 @@ class UserInput:
 
     """
     This method will take in a filename, check that it doesnt contain any reserved
-    characters, and then returns it
+    characters, and then returns it.
     """
     @staticmethod
     def getFileName(question):

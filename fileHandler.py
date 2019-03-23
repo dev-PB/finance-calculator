@@ -1,15 +1,17 @@
-import csv
-
 """
+Made by Ryan Wilson
+https://github.com/onlinePB
+
 This class will be used for writing to files
 """
+import csv
 
 
 class FileHandler:
 
     """
     This method will take in a filename and an array of records, it will
-    write to a csv file
+    write each record as a line in the file.
     """
     @staticmethod
     def export(fileName, data):
