@@ -4,6 +4,9 @@ https://github.com/onlinePB
 """
 from userInput import *
 from income import *
+from fileHandler import *
+import csv
+
 
 incomeMethods = []
 expenses = []
@@ -53,15 +56,16 @@ while running:
     for expense in expenses:
         expensePercentages.append((expense.getAmountMonthly() / expenseTotal*100))
 
-    """ JUST TESTING SOME STUFF
-    incomeData = []
-    expenseData = []
+    # ========== FORMAT FOR CSV
+    incomeData = [["Income Method", "Amount", "Percentage"]]
+    expenseData = [["Expense", "Amount", "Percentage"]]
     for i in range(len(incomeMethods)):
         incomeData.append([incomeMethods[i].getName(), incomeMethods[i].getAmountMonthly(), str(incomePercentages[i]) + "%"])
 
+    incomeData.append(["Total:", incomeTotal, "100%"])
+    incomeData.append(["", "", ""])
     for i in range(len(expenses)):
         expenseData.append([expenses[i].getName(), expenses[i].getAmountMonthly(), str(expensePercentages[i]) + "%"])
+    expenseData.append(["Total:", expenseTotal, "100%"])
 
-    print(incomeData)
-    print(expenseData)
-    """
+    FileHandler.export("output", incomeData + expenseData)
