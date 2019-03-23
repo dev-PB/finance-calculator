@@ -14,7 +14,7 @@ expenses = []
 running = True
 
 # Credits
-print("=== [ ABOUT ]===\nMade by Ryan Wilson\nCheckout my GitHub profile at https://github.com/onlinePB\nReport bugs at https://github.com/onlinePB/finance-calculator/issues\n© Ryan Wilson 2019. All rights reserved.")
+print("=== [ ABOUT ]===\nFinance Calculator v1.0.0\nMade by Ryan Wilson (github.com/onlinePB)\nReport bugs at https://github.com/onlinePB/finance-calculator/issues\n© Ryan Wilson 2019. All rights reserved.")
 input("\nPress Enter to continue...\n")
 
 while running:
