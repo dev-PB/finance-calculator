@@ -19,7 +19,7 @@ while running:
     while collectingIncomeMethods:
         incomeName = str(input("Enter the name of this income method:\n"))
         incomeAmount = UserInput.getFloat("Enter the amount you make per month through this method:\n")
-        incomeMethods.append(Income(incomeName, incomeAmount))
+        incomeMethods.append(Income(incomeName, round(incomeAmount,2)))
 
         if not UserInput.yesOrNo("Do you want to add another income method?\n[Y]es or [N]o: "):
             collectingIncomeMethods = False
@@ -30,7 +30,7 @@ while running:
     while collectingExpenses:
         expenseName = str(input("Enter the name of this expense:\n"))
         expenseAmount = -UserInput.getFloat("Enter the amount you spent per month on this expense:\n")
-        expenses.append(Income(expenseName, expenseAmount))
+        expenses.append(Income(expenseName, round(expenseAmount,2)))
 
         if not UserInput.yesOrNo("Do you want to add another expense?\n[Y]es or [N]o: "):
             collectingExpenses = False
@@ -52,10 +52,10 @@ while running:
     expensePercentages = []
 
     for method in incomeMethods:
-        incomePercentages.append((method.getAmountMonthly() / incomeTotal)*100)
+        incomePercentages.append(round((method.getAmountMonthly() / incomeTotal)*100, 2))
 
     for expense in expenses:
-        expensePercentages.append((expense.getAmountMonthly() / expenseTotal*100))
+        expensePercentages.append(round((expense.getAmountMonthly() / expenseTotal)*100, 2))
 
     # ========== FORMAT FOR CSV
     # Add income header and income methods
