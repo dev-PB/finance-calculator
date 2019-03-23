@@ -82,3 +82,7 @@ while running:
     # ========== GET FILENAME AND EXPORT
     FileHandler.export(UserInput.getFileName("What would you like to call your spreadsheet?\nFile name: "), data)
     print("Exported successfully!")
+
+    # ========== ASK IF THEY'D LIKE TO MAKE ANOTHER
+    if not UserInput.yesOrNo("Would you like to make another spreadsheet?\n[Y]es or [N]o: "):
+        running = False
