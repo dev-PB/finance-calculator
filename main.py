@@ -46,6 +46,8 @@ while running:
     for expense in expenses:
         expenseTotal += expense.getAmountMonthly()
 
+    netProfit = incomeTotal + expenseTotal
+
     # ========== GET PERCENTAGES
     incomePercentages = []
     expensePercentages = []
@@ -57,15 +59,17 @@ while running:
         expensePercentages.append((expense.getAmountMonthly() / expenseTotal*100))
 
     # ========== FORMAT FOR CSV
-    incomeData = [["Income Method", "Amount", "Percentage"]]
-    expenseData = [["Expense", "Amount", "Percentage"]]
+    data = [["Income Method", "Amount", "Percentage"]]
     for i in range(len(incomeMethods)):
-        incomeData.append([incomeMethods[i].getName(), incomeMethods[i].getAmountMonthly(), str(incomePercentages[i]) + "%"])
+        data.append([incomeMethods[i].getName(), incomeMethods[i].getAmountMonthly(), str(incomePercentages[i]) + "%"])
 
-    incomeData.append(["Total:", incomeTotal, "100%"])
-    incomeData.append(["", "", ""])
+    data.append(["Total:", incomeTotal, "100%"])
+    data.append(["", "", ""])
+    data.append(["Expense", "Amount", "Percentage"])
+
     for i in range(len(expenses)):
-        expenseData.append([expenses[i].getName(), expenses[i].getAmountMonthly(), str(expensePercentages[i]) + "%"])
-    expenseData.append(["Total:", expenseTotal, "100%"])
-
-    FileHandler.export("output", incomeData + expenseData)
+        data.append([expenses[i].getName(), expenses[i].getAmountMonthly(), str(expensePercentages[i]) + "%"])
+    data.append(["Total:", expenseTotal, "100%"])
+    data.append(["", "", ""])
+    data.append(["Net profit:", netProfit, ""])
+    FileHandler.export("output", data)

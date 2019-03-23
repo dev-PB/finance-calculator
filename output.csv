@@ -1,0 +1,11 @@
+Income Method,Amount,Percentage
+wages,200.0,50.0%
+loan,200.0,50.0%
+Total:,400.0,100%
+,,
+Expense,Amount,Percentage
+food,-100.0,33.33333333333333%
+bill,-200.0,66.66666666666666%
+Total:,-300.0,100%
+,,
+Net profit:,100.0,
