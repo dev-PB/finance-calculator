@@ -15,11 +15,11 @@ running = True
 
 # Credits
 print("=== [ ABOUT ]===\nFinance Calculator v1.0.0\nMade by Ryan Wilson (github.com/onlinePB)\nReport bugs at https://github.com/onlinePB/finance-calculator/issues\n© Ryan Wilson 2019. All rights reserved.")
-input("\nPress Enter to continue...\n")
+input("\nPress Enter to continue...")
 
 while running:
     # ========== GET CURRENCY SYMBOL
-    userCurrency = str(input("What symbol would you like to use for currency?\nCurrency symbol: "))
+    userCurrency = str(input("\nWhat symbol would you like to use for currency?\nCurrency symbol: "))
 
     # ========== COLLECT INCOME METHODS
     collectingIncomeMethods = True
