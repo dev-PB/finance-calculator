@@ -2,15 +2,17 @@
 Made by Ryan Wilson
 https://github.com/onlinePB
 """
+# Importing modules
 from userInput import *
 from income import *
 from fileHandler import *
 
-
+# Initialising variables
 incomeMethods = []
 expenses = []
 running = True
 
+print("===[ Made by Ryan Wilson (github.com/onlinePB) ]===\n")
 while running:
     # ========== GET CURRENCY SYMBOL
     userCurrency = str(input("Enter the symbol you would like to use for currency?\nCurrency symbol: "))
