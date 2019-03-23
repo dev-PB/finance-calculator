@@ -49,3 +49,23 @@ class UserInput:
 
             else:
                 return userAnswer
+
+    """
+    This method will take in a filename, check that it doesnt contain any reserved
+    characters, and then returns it
+    """
+    def getFileName(question):
+        while True:
+            try:
+                userAnswer = str(input(question))
+
+            except ValueError:
+                print("\nInvalid input! Please enter a correct filename!")
+                continue
+
+            if ":" in userAnswer or "/" in userAnswer or "\\" in userAnswer or ">" in userAnswer or "<" in userAnswer or "*" in userAnswer or '"' in userAnswer or "?" in userAnswer or "|" in userAnswer:
+                print('\nInvalid input! You can\'t have /, \\, >, <, *, ?, ", : or | in a filename!')
+                continue
+
+            else:
+                return userAnswer
