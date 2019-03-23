@@ -32,3 +32,36 @@ while running:
 
         if not UserInput.yesOrNo("Do you want to add another expense?\n[Y]es or [N]o: "):
             collectingExpenses = False
+
+    # ========== GET TOTALS
+    incomeTotal = 0
+    expenseTotal = 0
+
+    for method in incomeMethods:
+        incomeTotal += method.getAmountMonthly()
+
+    for expense in expenses:
+        expenseTotal += expense.getAmountMonthly()
+
+    # ========== GET PERCENTAGES
+    incomePercentages = []
+    expensePercentages = []
+
+    for method in incomeMethods:
+        incomePercentages.append((method.getAmountMonthly() / incomeTotal)*100)
+
+    for expense in expenses:
+        expensePercentages.append((expense.getAmountMonthly() / expenseTotal*100))
+
+    """ JUST TESTING SOME STUFF
+    incomeData = []
+    expenseData = []
+    for i in range(len(incomeMethods)):
+        incomeData.append([incomeMethods[i].getName(), incomeMethods[i].getAmountMonthly(), str(incomePercentages[i]) + "%"])
+
+    for i in range(len(expenses)):
+        expenseData.append([expenses[i].getName(), expenses[i].getAmountMonthly(), str(expensePercentages[i]) + "%"])
+
+    print(incomeData)
+    print(expenseData)
+    """
