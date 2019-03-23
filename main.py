@@ -5,7 +5,6 @@ https://github.com/onlinePB
 from userInput import *
 from income import *
 from fileHandler import *
-import csv
 
 
 incomeMethods = []
@@ -78,6 +77,6 @@ while running:
     data.append(["", "", ""])
     data.append(["Net profit:", netProfit, ""])
 
-    # ========== GET FILENAME
-
-    FileHandler.export("output", data)
+    # ========== GET FILENAME AND EXPORT
+    FileHandler.export(UserInput.getFileName("What would you like to call your spreadsheet?\nFile name: "), data)
+    print("Exported successfully!")

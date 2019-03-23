@@ -54,6 +54,7 @@ class UserInput:
     This method will take in a filename, check that it doesnt contain any reserved
     characters, and then returns it
     """
+    @staticmethod
     def getFileName(question):
         while True:
             try:
