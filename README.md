@@ -9,6 +9,8 @@ This program will take in a user's monthly income and expenses, and will spit ou
 
 ### How to install
 1. Go to the [releases section](https://github.com/onlinePB/finance-calculator/releases) and download the latest version for your system
-1. Run Finance Calculator.exe and follow the on screen instructions
+1. Run the executable
+    1. On Windows, run Finance-Calculator-Win.exe by double-clicking it or right-clicking it and selecting "open"
+    1. On Linux, open the terminal in the directory where you've put the executable and do ./Finance-Calculator-Linux
 
 *© Ryan Wilson 2019. All rights reserved.*
